@@ -1,0 +1,625 @@
+body {
+	background-color: #0d0d0d;
+  color:  whitesmoke;
+  font-family: Helvetica, sans-serif;
+	position: relative;
+}
+
+a:link {
+	text-decoration: none;
+	color: #0d0d0d;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #0d0d0d;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #0d0d0d;
+}
+
+a:active {
+	text-decoration: none;
+	color: #FFFFBC;
+}
+
+div.flexNav,
+div.flexNavLines,
+div.flexNavNoPad {
+	padding: 0 2em 0 0;
+  margin: 0.5em 0 0.5em 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
+
+div.flexNavNoPad {
+	padding: 0;
+}
+
+div.flexNavLines {
+	padding: 0 40% 0 0;
+}
+
+div.crunched {
+	line-height: 50%;
+}
+
+div.flexOuter {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 0;
+}
+
+div.flexOuterWide {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 0;
+}
+
+#inOut,
+#readLines {
+}
+
+
+div.menuShell {
+	position: absolute;
+	z-index: 2;
+	top: 33%;
+	width: 60%;
+	display: none;
+/*	opacity: 0.2;*/
+}
+
+div.option,
+div.option2 {
+	padding: 1%;
+	margin: 0.5% 0;
+	border-radius: 2px;
+	border: 1px solid #404040;
+	text-align: center;
+	opacity: 0.7;
+}
+
+div.option {
+	width: 40%;
+	font-weight: bold;
+}
+
+div.option2 {
+	width: 10%;
+	cursor: pointer;
+}
+
+div.option2:hover {
+	background-color: #3973AC;
+	color: #0d0d0d;
+	border: 1px solid #3973AC;
+}
+
+div.quadrants {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+div.columns {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+}
+
+
+div.flexInner1 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  flex: 1 1 35%;
+}
+
+div.flexInner2 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  flex: 1 1 35%;
+}
+
+div.menu {
+  margin: 2% 0 1% 0;
+	color: #0d0d0d;
+	border-radius: 2px;
+	font-weight: 600;
+}
+
+div.menu a {
+  background-color: #404040;
+  padding: 0.75em 0.75em 0.5em 0.75em;
+  text-decoration: none;
+}
+
+div.menu a:hover {
+  background-color: #3973AC;
+}
+
+div.menuHome {
+  margin: 2% 0 1% 0;
+	color: #0d0d0d;
+	border-radius: 2px;
+	font-weight: 600;
+}
+
+div.menuHome a {
+  background-color: #1a1a1a;
+	color: #404040;
+  padding: 0.75em 0.75em 0.5em 0.75em;
+  text-decoration: none;
+}
+
+div.menuHome a:hover {
+  background-color: #404040;
+	color: #0d0d0d;
+}
+
+#coinToss {
+	z-index: 0;
+}
+
+div.hexShell {
+	background-color: #0d0d0d;
+	padding: 1em;
+	max-width: 80%;
+	display: none;
+	position: absolute;
+	top: 12%;
+	opacity: 1;
+	z-index: 1;
+}
+
+div.readerShell {
+}
+
+div.pageShell {
+	z-index: 3;
+	position: relative;
+	top: 12%;
+	left: 37.5%;
+	max-width: 30%;
+	display: none;
+	background-color: #0d0d0d;
+}
+
+div.pageShellBuilder {
+	width: 60%;
+  display: none;
+	position: absolute;
+	z-index: 1;
+	top: 12%;
+	background-color: #0d0d0d;
+}
+
+header {
+	background-color: #CCCC7A;
+	text-align:center;
+	color: #33331F;
+	letter-spacing: 0.2em;
+	padding: 0.4em;
+	display: none;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  opacity: 0.6;
+	color: red;
+	line-height: 50%;
+}
+
+h4 {
+  opacity: 0.7;
+}
+
+button {
+	color:  whitesmoke;
+	padding: 0.6em;
+	margin: 0.5%;
+	border-radius: 2px;
+	border: 1px solid #404040;
+	background-color: #0d0d0d;
+	text-align: center;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #3973AC;
+	color: #0d0d0d;
+	border: 1px solid #3973AC;
+}
+
+/*button {
+  line-height: 90%;
+  background-color: #404040;
+  color: #0d0d0d;
+  opacity: 0.95;
+  font-size: 14px;
+  padding: 0.6em;
+  margin: 0.5%;
+  border: 0 none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #3973AC;
+  color: whitesmoke;
+	opacity: 0.8;
+}*/
+
+button.hexBut {
+}
+
+button#read {
+	display: none;
+}
+.thinmodule,
+.thinmoduleTri,
+.thinmoduleHex,
+.thinmoduleButton,
+.thinModCursor,
+.midmodule,
+.module,
+.medmodule,
+.widemodule,
+.widemoduleHex,
+.widermodule {
+	background-color: #1a1a1a;
+  color: whitesmoke;
+  text-align:center;
+	margin: 0.75em 0.3em 0.3em 0.3em;
+  padding: 1em;
+	height: 19em;
+}
+/*displays lines*/
+.thinmodule {
+	max-width: 6em;
+	height: 10em;
+  flex: 1 1 20%;
+}
+
+.thinmoduleTri {
+	max-width: 6em;
+	height: 16em;
+  flex: 1 1 20%;
+}
+
+.thinmoduleHex {
+	height: 16em;
+	max-width: 16em;
+	flex: 1 1 20%;
+}
+
+.hexName {
+}
+
+div.thinmoduleButton {
+	margin: 1% 4%;
+	max-width: 8em;
+	height: 10em;
+  flex: 1 1 20%;
+	border: 1px solid #3973AC;
+	border-radius: 2px;
+	display: none;
+}
+
+div.thinmoduleButton:hover {
+	cursor: pointer;
+}
+
+.midmodule {
+  flex: 1 1 30%;
+}
+
+.module {
+  max-width: 17em;
+  flex: 1 1 40%;
+}
+
+#hexX:hover {
+	 cursor: pointer;
+	 color: red;
+}
+
+.x:hover {
+	cursor: pointer;
+	color: red;
+}
+
+.medmodule {
+  margin: 0.3em;
+	font-size: 14px;
+  max-width: 17em;
+  flex: 1 1 20%;
+}
+
+.widemodule {
+  margin: 1% 0 1% 0;
+  padding: 0.75em 0 0.75em 0;
+  max-width: 30em;
+  height: 5em;
+  line-height: 120%;
+  flex: 1 1 40%;
+	display: none;
+}
+
+#coinToss {
+	line-height: 50%;
+	background-color: #0d0d0d;
+	border: 1px solid #404040;
+	border-radius: 2px;
+	padding: 0 0 1em 0;
+	opacity: 0.8;
+	display: block;
+}
+
+#coinTossHeader {
+	color: whitesmoke;
+	opacity: 1;
+}
+
+.widemoduleHex {
+  max-width: 30em;
+  height: 16em;
+  line-height: 150%;
+  flex: 1 1 20%;
+	padding : 0 0 0 0;
+}
+
+
+p {
+	color: whitesmoke;
+	opacity: 0.4;
+}
+
+p.littleHex {
+  font-size: 36px;
+	color: red;
+}
+
+p.line {
+	color: red;
+	opacity: 0.6;
+	font-weight: bold;
+	font-size: 22px;
+}
+
+.widemoduleText {
+  background-color: #1a1a1a;
+  color: whitesmoke;
+  margin: 0.75em 0.3em 0.3em 0.3em;
+  padding: 0.75em 0.75em 0.75em 0.75em;
+  max-width: 30em;
+  height: 5em;
+  text-align: center;
+  flex: 1 1 40%;
+}
+
+span.click {
+  line-height: 120%;
+	font-weight: bold;
+	background-color: #3973AC;
+	color: #0d0d0d;
+	border: 1px solid #3973AC;
+  cursor: pointer;
+	padding: 1%;
+	margin: 0.5% 0;
+	border-radius: 2px;
+	border: 1px solid #404040;
+	text-align: center;
+	opacity: 0.7;
+}
+
+span.click:hover {
+  background-color: #0d0d0d;
+	color: #404040;
+  color: whitesmoke;
+	opacity: 0.8;
+	border: 1px solid #404040;
+}
+
+span.stats {
+	display:none;
+}
+/*add flex specs here!!!*/
+div.read,
+div.crunch,
+div.put {
+	padding: 2% 2% 1% 2%;
+	flex: 1 1 2%;
+}
+
+div.read {
+	/*width: 6%;*/
+/*	border: 1px solid red;*/
+}
+
+div.crunch {
+	/*width: 3%;*/
+/*	border: 1px solid blue;*/
+}
+
+div.put {
+	/*border: 1px solid purple;*/
+	min-width: 5em;
+	text-align: center;
+}
+
+div.crunched {
+	text-align: center;
+}
+
+div#crunchMovers {
+	width: 0.5%;
+}
+
+p.movers,
+p.triQuads {
+	text-align: center;
+}
+
+p.triQuads {
+	font-size: 20px;
+/*	border: 1px solid green;*/
+	/*min-width: 16em;*/
+}
+
+p.movers {
+	font-size: 22px;
+	padding: 0 0 0.25em 0;
+	/*border: 1px solid white;*/
+}
+
+span.author {
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  opacity: 0.6;
+}
+
+span.subScr {
+  font-size: 12px;
+  font-weight: 400;
+  text-indent: 50px;
+  font-style: italic;
+	opacity: 0.5
+}
+
+p.bolded {
+  opacity: 0.5;
+}
+
+p.boldedBlocked {
+  opacity: 0.5;
+  letter-spacing: 1px;
+}
+
+.widermodule {
+  background-color: #1a1a1a;
+  color: whitesmoke;
+  margin: 0.75em 4em 0.3em 5em;
+  padding: 32px 88px 32px 88px;
+  max-width: 400em;
+  line-height: 220%;
+  text-align: center;
+  font-weight: 500;
+  flex: 1 1 40%;
+}
+
+h3 {
+  text-align: center;
+  opacity: 0.9;
+}
+
+h3.mainTitle {
+  opacity: 0.045;
+}
+input {
+	display: none;
+	background-color: #0d0d0d;
+	border: 1px solid #404040;
+	opacity:0.7;
+}
+
+div.expandTab,
+div.expandArticle {
+	background-color: #1a1a1a;
+	color: whitesmoke;
+	width: 60%;
+	padding: 0.75em;
+	text-align: center;
+}
+
+div.expandTab {
+	height: 4%;
+	margin: 0.25em 0.25em 0 0.25em;
+}
+
+div.expandArticle {
+	margin: 0 0.25em 0.25em 0.25em;
+	display: none;
+}
+
+div.plusMinus {
+	color: #0d0d0d;
+	font-weight: 700;
+	font-size: 22px;
+	width: 2em;
+	/*float: left;*/
+	cursor: pointer;
+	/*padding: 0.5em;*/
+}
+
+p.tabHeader,
+p.inform {
+	padding: 0.1em;
+	margin: 0.1em;
+	opacity: 0.5;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+p.inform {
+	text-align: justify;
+	text-indent: 2.5em;
+	padding: 0 1em 0 1em;
+  font-weight: 400;
+	opacity: 0.5;
+}
+
+#centered {
+	text-align: center;
+	text-indent: 0;
+}
+
+div.plusMinus:hover {
+	color: #3973AC;
+}
+
+div.tempHide {
+	display: none;
+}
+
+table {
+	background-color: #1a1a1a;
+	color: whitesmoke;
+	opacity: 0.6;
+	padding: 0.25;
+}
+
+tr {
+	padding: 0.25em;
+}
+
+th,td {
+	padding: 1em;
+	text-align: center;
+}
+
+
+
+div.tableShell {
+	background-color:#0d0d0d;
+	position: absolute;
+	top: 9%;
+	left: 15%;
+	padding: 0.75em;
+	z-index: 1;
+	display: none;
+}
+
+#trig {
+	padding: 0;
+}
+
+img {
+	margin: 1.5em;
+}

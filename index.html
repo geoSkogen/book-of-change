@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Throw Hexagrams</title>
+
+<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/ichingprotostyles.css">
+
+<body>
+
+  <!-- this is the nav -->
+
+  <div class="flexOuter">
+    <div class="menu"><a href="index.html">throw</a></div>
+    <div class="menu"><a href="pages/buildahex.html">build</a></div>
+    <div class="menu"><a href="pages/yinbookofchange.html">guide</a></div>
+    <div class="menu">
+      <a href="https://github.com/geoSkogen/i_ching">source</a></div>
+    <div class="menuHome">
+      <a href="http://geoskogen.github.io/joseph_scoggins/">home</a>
+    </div>
+  </div>
+
+<!--This is the "read hexagrams" modal -->
+
+  <div class="flexOuter">
+    <div class="hexShell">
+      <div class="flexNavNoPad"><span id="hexX">X</span></div>
+      <div class="flexOuter">
+        <span class="click">interpret your hexagrams</span>
+      </div>
+      <div class="flexOuter">
+        <div class="thinmoduleTri">
+          <br/>
+          <h4>your trigrams</h4>
+          <p class="trigram"></p>
+          <p class="trigram"></p>
+        </div>
+        <div class="flexOuterWide">
+          <div class="thinmoduleHex">
+            <h4>your hexagram</h4>
+            <p class="hexName"></p>
+          </div>
+        </div>
+        <div class="flexOuterWide">
+          <div class="thinmoduleHex">
+            <h4>your hexagram</h4>
+            <p class="hexName"></p>
+          </div>
+        </div>
+        <div class="thinmoduleTri">
+          <br/>
+          <h4>your trigrams</h4>
+          <p class="trigram"></p>
+          <p class="trigram"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- this is the line builder module -->
+  <h3 class="mainTitle">i ching ~ book of change </h4>
+  <div class="flexOuter">
+    <div class="widemodule" id="coinToss">
+      <h4 id="coinTossHeader">throw random lines</h4>
+      <div class="flexOuter">
+        <button>line 1</button>
+        <button>line 2</button>
+        <button>line 3</button>
+        <button>line 4</button>
+        <button>line 5</button>
+        <button>line 6</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- this is the interpreter menu modal  -->
+
+  <div class="flexOuterWide">
+    <div class="menuShell">
+      <div class="flexOuterWide"><h4 id="menuShellTitle"></h4></div>
+      <div class="flexOuterWide" id="inOut">
+        <div class="option">inner</div>
+        <div class="option">outer</div>
+      </div>
+      <div class="flexOuterWide" id="readLines">
+        <div class="option2">purport</div>
+        <div class="option2">lines</div>
+        <div class="option2">purport</div>
+        <div class="option2">lines</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- diagram of hex lines; this stays put -->
+
+  <div class="flexOuter">
+    <div class="thinmodule">
+      <h4 class="hides">your lines</h4>
+      <h2></h2>
+    </div>
+    <div class="thinmodule">
+      <h4 class="hides">your lines</h4>
+      <h2></h2>
+    </div>
+  </div>
+
+  <!-- read & reset buttons appear here-->
+
+  <div class="flexOuter" id="appendMe"></div>
+
+  <!-- interpretation fields -->
+
+  <div class="pageShell">
+    <div class="medmodule">
+      <div class="flexNavNoPad"><span class="x">X</span></div>
+      <h4>inner reading</h4>
+      <p class="L"></p>
+    </div>
+  </div>
+  <div class="pageShell">
+    <div class="medmodule">
+      <div class="flexNavNoPad"><span class="x">X</span></div>
+      <h4>outer reading</h4>
+      <p class="L"</p>
+    </div>
+  </div>
+  <div class="pageShell">
+    <div class="medmodule">
+      <div class="flexNavNoPad"><span class="x">X</span></div>
+      <h4>inner</h4>
+      <p class="L"></p>
+    </div>
+  </div>
+  <div class="pageShell">
+    <div class="medmodule">
+      <div class="flexNavNoPad"><span class="x">X</span></div>
+      <h4>outer</h4>
+      <p class="L"></p>
+    </div>
+  </div>
+  <div class="pageShell">
+    <div class="medmodule">
+      <div class="flexNavNoPad"><span class="x">X</span></div>
+      <h4>inner reading</h4>
+      <p class="R"></p>
+    </div>
+  </div>
+  <div class="pageShell">
+    <div class="medmodule">
+      <div class="flexNavNoPad"><span class="x">X</span></div>
+      <h4>outer reading</h4>
+      <p class="R"></p>
+    </div>
+  </div>
+  <div class="pageShell">
+    <div class="medmodule">
+      <div class="flexNavNoPad"><span class="x">X</span></div>
+      <h4>inner</h4>
+      <p class="R"></p>
+    </div>
+  </div>
+  <div class="pageShell">
+    <div class="medmodule">
+      <div class="flexNavNoPad"><span class="x">X</span></div>
+      <h4>outer</h4>
+      <p class="R"></p>
+    </div>
+  </div>
+</body>
+
+<script src="scripts/iChingData.js"></script>
+<script src="scripts/iChingProtoScript.js"></script>
+
+</html>
