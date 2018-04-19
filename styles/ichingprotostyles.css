@@ -1,8 +1,8 @@
 body {
-	background-color: #0d0d0d;
+  background-color: #0d0d0d;
   color:  whitesmoke;
   font-family: Helvetica, sans-serif;
-	position: relative;
+  position: relative;
 }
 
 a:link {
@@ -28,7 +28,7 @@ a:active {
 div.flexNav,
 div.flexNavLines,
 div.flexNavNoPad {
-	padding: 0 2em 0 0;
+  padding: 0 2em 0 0;
   margin: 0.5em 0 0.5em 0;
   display: flex;
   flex-flow: row wrap;
@@ -134,7 +134,7 @@ div.flexInner2 {
 }
 
 div.menu {
-  margin: 2% 0 1% 0;
+    margin: 2% 0 1% 0;
 	color: #0d0d0d;
 	border-radius: 2px;
 	font-weight: 600;
@@ -151,7 +151,7 @@ div.menu a:hover {
 }
 
 div.menuHome {
-  margin: 2% 0 1% 0;
+    margin: 2% 0 1% 0;
 	color: #0d0d0d;
 	border-radius: 2px;
 	font-weight: 600;
@@ -159,7 +159,7 @@ div.menuHome {
 
 div.menuHome a {
   background-color: #1a1a1a;
-	color: #404040;
+  color: #404040;
   padding: 0.75em 0.75em 0.5em 0.75em;
   text-decoration: none;
 }
@@ -199,7 +199,7 @@ div.pageShell {
 
 div.pageShellBuilder {
 	width: 60%;
-  display: none;
+    display: none;
 	position: absolute;
 	z-index: 1;
 	top: 12%;
@@ -218,8 +218,8 @@ header {
 h2 {
   font-family: Arial, sans-serif;
   opacity: 0.6;
-	color: red;
-	line-height: 50%;
+  color: red;
+  line-height: 50%;
 }
 
 h4 {
@@ -277,24 +277,24 @@ button#read {
 .widemodule,
 .widemoduleHex,
 .widermodule {
-	background-color: #1a1a1a;
+  background-color: #1a1a1a;
   color: whitesmoke;
   text-align:center;
-	margin: 0.75em 0.3em 0.3em 0.3em;
+  margin: 0.75em 0.3em 0.3em 0.3em;
   padding: 1em;
-	height: 19em;
+ 
 }
 /*displays lines*/
 .thinmodule {
-	max-width: 6em;
-	height: 10em;
+  max-width: 6em;
+  height: 10em;
   flex: 1 1 20%;
 }
 
 .thinmoduleTri {
 	max-width: 6em;
 	height: 16em;
-  flex: 1 1 20%;
+    flex: 1 1 20%;
 }
 
 .thinmoduleHex {
@@ -310,7 +310,7 @@ div.thinmoduleButton {
 	margin: 1% 4%;
 	max-width: 8em;
 	height: 10em;
-  flex: 1 1 20%;
+    flex: 1 1 20%;
 	border: 1px solid #3973AC;
 	border-radius: 2px;
 	display: none;
@@ -341,8 +341,9 @@ div.thinmoduleButton:hover {
 
 .medmodule {
   margin: 0.3em;
-	font-size: 14px;
+  font-size: 14px;
   max-width: 17em;
+  /*min-width: 16em;*/
   flex: 1 1 20%;
 }
 
@@ -353,7 +354,7 @@ div.thinmoduleButton:hover {
   height: 5em;
   line-height: 120%;
   flex: 1 1 40%;
-	display: none;
+  display: none;
 }
 
 #coinToss {
@@ -376,7 +377,7 @@ div.thinmoduleButton:hover {
   height: 16em;
   line-height: 150%;
   flex: 1 1 20%;
-	padding : 0 0 0 0;
+  padding : 0 0 0 0;
 }
 
 
