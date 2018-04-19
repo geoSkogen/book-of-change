@@ -54,6 +54,11 @@ div.flexOuter {
   padding: 0;
 }
 
+#builderShell {
+	max-width: 700px;
+	flex: 1 1 95%;
+}
+
 div.flexOuterWide {
   display: flex;
   flex-flow: row wrap;

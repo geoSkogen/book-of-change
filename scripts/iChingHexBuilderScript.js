@@ -176,7 +176,7 @@ function initFuncs() {
     var outerMovers = "";
     if (userHexNums[0] == 1) {
       var cleanLinesArr = cleanLines.split("");
-      for (m = 0; m < cleanLinesArr.length; m++ ) {
+      for (var m = 0; m < cleanLinesArr.length; m++ ) {
         innerMovers += movingStillLinesInner[userHexNums[1]][cleanLinesArr[m]]
                        + "<br/>";
         outerMovers += movingStillLinesOuter[userHexNums[1]][cleanLinesArr[m]]
