@@ -327,6 +327,10 @@ div.thinmoduleColumn {
   padding: 1em;
 }
 
+div.spotBox {
+  height: 8em;
+}
+
 div.yinbitT,
 div.yangline {
   height: 0.5em;
@@ -343,7 +347,7 @@ div.yangline {
 }
 
 div.yangline {
-  width: 24em;
+  width: 3em;
 }
 
 div.yinline {
@@ -351,7 +355,7 @@ div.yinline {
 
 div.yinbitT,
 div.yinbitF {
-  width: 8em;
+  width: 1em;
 }
 
 div.yinbitF {

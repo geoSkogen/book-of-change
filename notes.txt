@@ -1,0 +1,59 @@
+<div class="yangline"></div>
+<div class="deadline"></div>
+<div class="yinline">
+  <div class="flexOuter">
+    <div class="yinbitT"></div>
+    <div class="yinbitF"></div>
+    <div class="yinbitT"></div>
+  </div>
+</div>
+<div class="deadline"></div>
+<div class="yangline"></div>
+<div class="deadline"></div>
+<div class="yinline">
+  <div class="flexOuter">
+    <div class="yinbitT"></div>
+    <div class="yinbitF"></div>
+    <div class="yinbitT"></div>
+  </div>
+</div>
+<div class="deadline"></div>
+<div class="yangline"></div>
+<div class="deadline"></div>
+<div class="yinline">
+  <div class="flexOuter">
+    <div class="yinbitT"></div>
+    <div class="yinbitF"></div>
+    <div class="yinbitT"></div>
+  </div>
+</div>
+
+<div class="yinline">
+  <div class="flexOuter">
+    <div class="yinbitT"></div>
+    <div class="yinbitF"></div>
+    <div class="yinbitT"></div>
+  </div>
+</div>
+<div class="deadline"></div>
+<div class="yangline"></div>
+<div class="deadline"></div>
+<div class="yinline">
+  <div class="flexOuter">
+    <div class="yinbitT"></div>
+    <div class="yinbitF"></div>
+    <div class="yinbitT"></div>
+  </div>
+</div>
+<div class="deadline"></div>
+<div class="yangline"></div>
+<div class="deadline"></div>
+<div class="yinline">
+  <div class="flexOuter">
+    <div class="yinbitT"></div>
+    <div class="yinbitF"></div>
+    <div class="yinbitT"></div>
+  </div>
+</div>
+<div class="deadline"></div>
+<div class="yangline"></div>
