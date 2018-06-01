@@ -52,7 +52,7 @@ function initFuncs() {
   var butReset = document.createElement("button");
   butReset.id = "clear";
   var butRefresh = document.createElement("button");
-  butReset.id = "refresh";
+  butRefresh.id = "refresh";
   var linkRefresh = document.createElement("a");
   linkRefresh.setAttribute("href", "index.html");
   linkRefresh.innerHTML = "start over";
@@ -239,11 +239,11 @@ function initFuncs() {
 
     div.appendChild(butGet);
     butGet.innerHTML = "read";
-    butGet.onclick = openHexModal;
+    butGet.addEventListener("click", openHexModal);
 
     div.appendChild(butReset);
     butReset.innerHTML = "reset";
-    butReset.onclick = clearFields;
+    butReset.addEventListener("click", function () { window.location.assign(window.location.href) } );
 
     buttonShell.style.opacity = "0";
   }
