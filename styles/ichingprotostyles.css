@@ -199,7 +199,7 @@ div.pageShell {
 
 div.pageShellBuilder {
 	width: 60%;
-    display: none;
+  display: none;
 	position: absolute;
 	z-index: 1;
 	top: 12%;
@@ -282,7 +282,7 @@ button#read {
   text-align:center;
   margin: 0.75em 0.3em 0.3em 0.3em;
   padding: 1em;
- 
+
 }
 /*displays lines*/
 .thinmodule {
@@ -310,7 +310,7 @@ div.thinmoduleButton {
 	margin: 1% 4%;
 	max-width: 8em;
 	height: 10em;
-    flex: 1 1 20%;
+  flex: 1 1 20%;
 	border: 1px solid #3973AC;
 	border-radius: 2px;
 	display: none;
@@ -318,6 +318,43 @@ div.thinmoduleButton {
 
 div.thinmoduleButton:hover {
 	cursor: pointer;
+}
+
+div.thinmoduleColumn {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  padding: 1em;
+}
+
+div.yinbitT,
+div.yangline {
+  height: 0.5em;
+}
+
+div.deadline {
+  height: 0.5em;
+}
+
+div.yinbitT,
+div.yangline {
+  background-color: red;
+  opacity: 0.8;
+}
+
+div.yangline {
+  width: 24em;
+}
+
+div.yinline {
+}
+
+div.yinbitT,
+div.yinbitF {
+  width: 8em;
+}
+
+div.yinbitF {
 }
 
 .midmodule {
