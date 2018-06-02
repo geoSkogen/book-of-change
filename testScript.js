@@ -48,7 +48,7 @@ function initFuncs() {
   }
 
   function fillLivingLines(parentElm, blankHex) {
-    var testStat = 0
+    var testStat = 0     
     var newline
     for (let i = 0; i < blankHex.length; i++) {
       testStat = Math.random()

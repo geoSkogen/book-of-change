@@ -4,6 +4,7 @@ window.addEventListener("load", initFuncs);
 
 function initFuncs() {
 
+  var testy = document.getElementById("test")
   //var defLines = document.getElementsByTagName("h2");
   var buttons = document.getElementsByTagName("button");
   var pElms = document.getElementsByTagName("p");
@@ -23,6 +24,7 @@ function initFuncs() {
   var thinMods = document.getElementsByClassName("thinmoduleColumn");
   var coinTossMod = document.getElementById("coinToss");
 
+  var hexLines = fillDeadLines()
 
   var hex1Lines = [" ", " ", " ", " ", " ", " "];
   var hex2Lines = [" ", " ", " ", " ", " ", " "];
@@ -126,7 +128,10 @@ function initFuncs() {
     assigner(thisButt, i);
 
     function assigner(button, number) {
-      button.onclick = function () { coinToss(number); };
+      button.onclick = function () {
+        if (hex1Log[number] == -1)
+          coinToss(number); 
+      };
     }
   }
 
@@ -139,7 +144,8 @@ function initFuncs() {
       for (let j = 0; j < 12; j++) {
         dead = document.createElement("div")
         dead.className = "deadline"
-        dead.style.color = "red"
+        dead.style.color = "grey"
+        dead.innerHTML = j
         columns[i].appendChild(dead)
         if (j%2 == 0) {
           lines[i].push(dead)
@@ -149,37 +155,93 @@ function initFuncs() {
     return lines
   }
 
+  function buildYinLine() {
+    var yinline = document.createElement("div")
+    var flexBox = document.createElement("div")
+    var bits = []
+    yinline.className = "yinline"
+    flexBox.className = "flexOuter"
+    for (let i = 0; i < 3; i++) {
+      bits[i] = document.createElement("div")
+      bits[i].className = "yinbitT"
+      if (i%2 != 0) {
+        bits[i].className = "yinbitF"
+      }
+      flexBox.appendChild(bits[i])
+    }
+    yinline.appendChild(flexBox)
+    return yinline
+  }
+
+  function buildYangLine() {
+    var innerYangline = document.createElement("div")
+    var yangline = document.createElement("div")
+    innerYangline.className = "yangline"
+    yangline.className = "flexOuter"
+    yangline.appendChild(innerYangline)
+    return yangline
+  }
+
+  function fillLivingLine(parentElm, deadLine, lineKey) {
+    var newline
+    if (lineKey == 1) {
+        newline = buildYangLine()
+    } else {
+        newline = buildYinLine()
+    }
+    parentElm.replaceChild(newline,deadLine)
+  }
+
+  function checkMovingLines() {
+    testy.innerHTML = ""
+    for (let i = 0; i < hexLines[1].length; i++) {
+      testy.innerHTML += "; hexLines[1][" + i.toString() + "] is " + hexLines[1][i].className
+      testy.innerHTML += "; movingHex[" + i.toString() + "] is " + movingHex[i].toString()
+      /*
+      if (movingHex[i] == 1 && hexLines[1][i].className == "deadline") {
+      //fillLivingLine(thinMods[1],hexLines[1][i],hex2Log[i])
+
+      }*/
+    }
+  }
+
   function coinToss(lineIndex) {
   /*  if (lineIndex === 0) {
       clearFields();
     }*/
     var coin = Math.random();
-      if (coin > 0 && coin <= 0.25) {
+    if (coin > 0 && coin <= 0.25) {
         hex1Lines[lineIndex] = yangLine;
         hex2Lines[lineIndex] = yangLine;
         hex1Log[lineIndex] = 1;
         hex2Log[lineIndex] = 1;
-      } else if (coin > 0.25 && coin <= 0.5) {
+    } else if (coin > 0.25 && coin <= 0.5) {
         hex1Lines[lineIndex] = yinLine;
         hex2Lines[lineIndex] = yinLine;
         hex1Log[lineIndex] = 0;
         hex2Log[lineIndex] = 0;
-      } else if (coin > 0.5 && coin <= 0.75) {
+    } else if (coin > 0.5 && coin <= 0.75) {
         hex1Lines[lineIndex] = yinLine;
         hex2Lines[lineIndex] = yangLine;
         hex1Log[lineIndex] = 0;
         hex2Log[lineIndex] = 1;
         moving = 1;
         movingHex[lineIndex] = 1;
-      } else if (coin > 0.75 && coin < 1){
+    } else if (coin > 0.75 && coin < 1){
         hex1Lines[lineIndex] = yangLine;
         hex2Lines[lineIndex] = yinLine;
         hex1Log[lineIndex] = 1;
         hex2Log[lineIndex] = 0;
         moving = 1;
         movingHex[lineIndex] = 1;
-      }
-      /*
+    }
+    fillLivingLine(thinMods[0],hexLines[0][lineIndex],hex1Log[lineIndex])
+    if (moving != 0) {
+      //fillLivingLine(thinMods[1],hexLines[1][lineIndex],hex2Log[lineIndex])
+      checkMovingLines()
+    }
+    /*
+
    defLines[0].innerHTML = hex1Lines[5] + "<br/>" + hex1Lines[4] + "<br/>" +
                            hex1Lines[3] + "<br/>" + hex1Lines[2] + "<br/>" +
                            hex1Lines[1] + "<br/>" + hex1Lines[0] + "<br/>" +
@@ -188,7 +250,7 @@ function initFuncs() {
                            hex2Lines[4] + "<br/>" + hex2Lines[3] + "<br/>" +
                            hex2Lines[2] + "<br/>" + hex2Lines[1] + "<br/>" +
                            hex2Lines[0] + "<br/>" + "<br/>";
-      */
+    */
     checkComplete();
 
     function checkComplete() {
@@ -395,5 +457,14 @@ function initFuncs() {
        movingStillLinesOuter[userHexNums[hex]][0] : outerMoversString;
    }
 
-   var hexLines = fillDeadLines()
+
+   /*
+   var testy = document.getElementById("test")
+   for (let i = 0; i < hexLines.length; i++) {
+      testy.innerHTML += "column" + i.toString() + " : "
+     for (let j = 0; j < hexLines[i].length; j++) {
+       testy.innerHTML += hexLines[i][j].className + " "
+     }
+   }
+   */
 }

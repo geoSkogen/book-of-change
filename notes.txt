@@ -1,3 +1,6 @@
+
+<!-- FYI, y'all, this is the test pattern for the custom I Ching html elements -->
+
 <div class="yangline"></div>
 <div class="deadline"></div>
 <div class="yinline">

@@ -325,7 +325,7 @@ div.thinmoduleColumn {
   flex-flow: column wrap;
   justify-content: space-around;
   padding: 1em;
-  /*border: 1px solid yellow;*/
+  border: 1px solid yellow;
 }
 
 div.spotBox {
@@ -339,8 +339,8 @@ div.yangline {
 
 div.deadline {
   height: 0.5em;
-  width: 3em;
-  /*border: 1px solid grey;*/
+/*  width: 3em;*/
+  border: 1px solid grey;
 }
 
 div.yinbitT,
