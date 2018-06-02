@@ -10,12 +10,12 @@ function initFuncs() {
     var columns = document.getElementsByClassName("thinmoduleColumn")
     var lines = [[],[]]
     for (let i = 0; i < columns.length; i++) {
-      for (let j = 0; j < 12; j++) {
+      for (let j = 0; j < 13; j++) {
         dead = document.createElement("div")
         dead.className = "deadline"
         dead.style.color = "red"
         columns[i].appendChild(dead)
-        if (j%2 == 0) {
+        if (j%2 == 0 && j != 12) {
           lines[i].push(dead)
         }
       }
@@ -61,9 +61,14 @@ function initFuncs() {
     }
   }
 
-  var hexLines = fillDeadLines()
+  var hexLines// = fillDeadLines()
   var columnBoxes = document.getElementsByClassName("thinmoduleColumn")
-  for (let i = 0; i < columnBoxes.length; i++) {
-    fillLivingLines(columnBoxes[i],hexLines[i])
-  }
+  var intervalObj = setInterval( function () {
+      //document.getElementById("test").innerHTML = window.innerHeight
+      window.scrollTo(0,document.body.scrollHeight)
+      hexLines = fillDeadLines()
+      for (let i = 0; i < columnBoxes.length; i++) {
+        fillLivingLines(columnBoxes[i],hexLines[i])
+      }
+    }, 1000)
 }
