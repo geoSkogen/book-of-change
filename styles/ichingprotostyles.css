@@ -673,3 +673,24 @@ div.tableShell {
 img {
 	margin: 1.5em;
 }
+
+img.titleDispImg {
+  margin: 0 0 0 0;
+  opacity: 0.75;
+  border-radius: 2px;
+}
+
+img#book_of_change {
+  position: absolute;
+  top: 74px;
+}
+
+
+div#i_ching {
+  background: url("../images/i_ching.png");
+  width: 320px;
+  height: 110px;
+  position: relative;
+  margin: 0.5em;
+  border-radius: 2px;
+}
